@@ -9,7 +9,7 @@ export default class ProductsController {
 
     const creteProduct = container.resolve(CreateProductService);
 
-    const product = creteProduct.execute({ name, price, quantity });
+    const product = await creteProduct.execute({ name, price, quantity });
 
     return response.json(product);
   }
